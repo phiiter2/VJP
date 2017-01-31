@@ -1,0 +1,57 @@
+
+h1  {
+    color: #2b7a7c;
+    font-family: Arial;
+    margin-top: 120px;
+    text-align: center;
+    font-size: 4.5em;
+}
+
+.navi li  {
+    display: inline-block;
+  
+    margin-right: 10px;
+}
+
+.navi  {
+    background-color: #17888b;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.navi a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+    font-size: 2em;
+}
+
+body  {
+    background: #1f1f1f;
+}
+
+article  {
+    text-align: center;
+    
+}
+
+article h2:hover  {
+    transition: 1s;
+    font-size: 5em;
+}
+
+summary  {
+    font-size: 2em;
+    font-family: Arial;
+    
+    
+}
+
+@media screen and (max-width: 500px) {
+    article  {
+        width: 100%
+    }
+}

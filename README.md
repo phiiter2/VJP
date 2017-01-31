@@ -1,2 +1,0 @@
-# VJP
-Verkkojulkaisun perusteet juttuja

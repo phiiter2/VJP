@@ -3,14 +3,37 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 
-
-h1  {
-    color: #2b7a7c;
-    font-family: Arial;
-    margin-top: 120px;
-    text-align: center;
-    font-size: 4.5em;
+body  {
+    background: #f0ebe7;
 }
+
+#isokuva  {
+    width: 100%;
+    position: relative;
+    margin-top: 2.5em;
+}
+
+body p  {
+    position: absolute;
+    display: inline-block;
+    color: orangered;
+    margin-top: 100px;
+    margin-left: 50%;
+    font-size: 3em;
+    font-family: sans-serif;
+    z-index: 2;
+
+}
+
+div img {
+    float: left;
+    width: 25%;
+    margin-top: -0.3em;
+    
+}
+
+
+
 
 .navi li  {
     display: inline-block;
@@ -26,18 +49,17 @@ h1  {
     left: 0px;
     right: 0px;
     padding: 10px;
+    z-index: 1;
+
 }
 
 .navi a {
     text-decoration: none;
     color: #b04802;
-    font-family: 'Quicksand', sans-serif;
+    font-family: Quicksand, sans-serif;
     font-size: 1.6em;
 }
 
-body  {
-    background: #1f1f1f;
-}
 
 article  {
     text-align: center;
@@ -62,9 +84,6 @@ summary  {
     }
 }
 
-#isokuva  {
-    width: 100%;
-}
 
 li  {
     padding-right: 10px;

@@ -7,22 +7,86 @@ body  {
     background: linear-gradient(to bottom, #ff6600 0%, #000000 100%);
 }
 
-#isokuva  {
-    width: 100%;
-    position: relative;
-    margin-top: 2.5em;
-}
+
 
 body p  {
     position: absolute;
     display: inline-block;
     color: black;
-    margin-top: 5%;
+    margin-top: 15%;
     margin-left: 12%;
     font-size: 500%;
     font-family: quicksand, sans-serif;
     z-index: 2;
     width: 30%;
+}
+
+
+
+.navi  {
+    background-color: #1e1e1e;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 1.7%;
+    z-index: 1;
+}
+
+.navi li  {
+    display: inline-block;
+}
+
+.navi a {
+    text-decoration: none;
+    color: #b04802;
+    font-family: Quicksand, sans-serif;
+    font-size: 1em;
+    margin-right: 1.9em;
+}
+
+
+
+
+
+
+.navi2  {
+    background-color: #000000;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    padding: 6.8% 2% 2% 2%;
+}
+
+#kantoja  {
+    color: #3e3833;
+    margin-bottom: 0.4em;
+    font-family: Quicksand, sans-serif;
+    font-size: 0.9em;
+}
+
+.navi2 li  {
+    display: inline-block; 
+}
+
+.navi2 a  {
+    text-decoration: none;
+    color: #b04802;
+    font-family: Quicksand, sans-serif;
+    font-size: 2em;
+    margin-right: 0.8em;
+    margin-left: 0.8em;
+}
+
+
+
+
+/*KUVAT*/
+
+#isokuva  {
+    width: 100%;
+    float: left;
 }
 
 div img {
@@ -34,31 +98,7 @@ div img {
 
 
 
-
-.navi li  {
-    display: inline-block;
-  
-    margin-right: 10px;
-}
-
-.navi  {
-    background-color: #1e1e1e;
-    text-align: center;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 10px;
-    z-index: 1;
-
-}
-
-.navi a {
-    text-decoration: none;
-    color: #b04802;
-    font-family: Quicksand, sans-serif;
-    font-size: 1.6em;
-}
+/*ARTIKKELIT*/
 
 
 article  {
@@ -70,6 +110,9 @@ article h2:hover  {
     transition: 1s;
     font-size: 5em;
 }
+
+
+
 
 summary  {
     font-size: 2em;
@@ -85,13 +128,8 @@ summary  {
 }
 
 
-li  {
-    padding-right: 10px;
-}
 
-.navitext  {
-    color: #b04802;
-}
+
 
 footer  {
     position: absolute;

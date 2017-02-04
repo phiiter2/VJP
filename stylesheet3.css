@@ -4,21 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body  {
-    background: #ecddd1;
-}
-
-
-
-body p  {
-    position: absolute;
-    display: inline-block;
-    color: black;
-    margin-top: 15%;
-    margin-left: 12%;
-    font-size: 500%;
-    font-family: quicksand, sans-serif;
-    z-index: 2;
-    width: 30%;
+    background: white;
 }
 
 
@@ -105,7 +91,12 @@ div img {
 
 /*HEADER*/
 
-
+header  {
+    font-size: 1.3em;
+    font-family: Quicksand, sans-serif;
+    font-weight: 900;
+    
+}
 
 
 /*ARTIKKELIT*/
@@ -113,7 +104,6 @@ div img {
 
 article  {
     text-align: center;
-    
 }
 
 article h2:hover  {
@@ -142,7 +132,7 @@ summary  {
 
 
 footer  {
-    position: absolute;
+    bottom: 0px;
     font-size: 1em;
     height: 3em;
     width: 100%;
@@ -152,7 +142,7 @@ footer  {
 }
 
 footer p  {
-    float: right;
+    float: left;
     font-size: 0.5em;
     color: aliceblue;
     margin: auto;

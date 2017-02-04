@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body  {
-    background: linear-gradient(to bottom, #000000 30%, #ff6600 100%);
+    background: #ecddd1;
 }
 
 
@@ -103,6 +103,10 @@ div img {
 }
 
 
+/*HEADER*/
+
+
+
 
 /*ARTIKKELIT*/
 
@@ -144,6 +148,7 @@ footer  {
     width: 100%;
     color: orangered;
     background-color: #111111;
+    clear: both;
 }
 
 footer p  {

@@ -37,92 +37,57 @@ body  {
 }
 
 
-#isokuva  {
-    width: 100%;
-    position: relative;
-    margin-top: 2em;
+
+h1  {
+    color: #b04802;
+    position: absolute;
+    top: 7%;
+    left: 2%;
+    font-size: 3em;
+    font-family: Permanent Marker, cursive;
+    padding: 1em;
 }
-
-
-
-div img {
-    position: relative;
-    float: left;
-    width: 25%;
-    margin-top: -0.5em;
-    height: 8em;
-}
-
 
 h2  {
-    position: relative;
-    top: 0.5em;
-    font-size: 2em;
-    margin-left: 1em;
-    color: black;
-    letter-spacing: 0.1em;
-}
-
-article  {
-    position: relative;
-    clear: both;
-    text-align: left;
-    height: 23em;
-}
-
-.leipäteksti  {
-    font-size: 1em;
-    top: 2em;
-    color: black;
-    font-family: sans-serif;
-    text-align: left;
-    position: relative;
-    margin-left: 2em;
-    margin-right: 39%;
-    line-height: 1.2em
-}
-
-article img  {
-    position: absolute;
-    top: 1.2em;
-    right: 2em;
-    height: 60%;
-}
-
-
-
-#h3a  {
-    text-decoration: none;
-}
-
-#h3a:hover  {
-    transition: 1s;
-    font-size: 1.1em;
-}
-
-#h3  {
-    font-family: quicksand, sans-serif;
-    position: relative;
-    top: -2em;
-    font-size: 2em;
-    margin: 1em;
-    padding: 0.5em;
-    background-color: #111111;
-    border-radius: 1em;
     color: #b04802;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-size: 2.5em;
+    font-family: 'Permanent Marker', cursive;
 }
 
-#h3:hover  {
-    transition: 2s;
-    color: aqua;
-}
 
-summary  {
+h3  {
+    color: #b04802;
+    position: absolute;
+    top: 40%;
+    left: 30%;
     font-size: 2em;
-    font-family: Arial;
-    
-    
+    font-family: 'Permanent Marker', cursive;
 }
+
+h4  {
+    color: #b04802;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    font-size: 1.5em;
+    font-family: 'Permanent Marker', cursive;
+    margin-right: 55%
+}
+
+#p  {
+    background-color: #000000;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    padding: 6.8% 2% 2% 2%;
+    color: #b04802;
+    font-family: Quicksand, sans-serif;
+    font-size: 2em;
+}
+
 
 @media screen and (max-width: 500px) {
     article  {
@@ -132,6 +97,7 @@ summary  {
 
 footer  {
     position: absolute;
+    bottom: 0;
     font-size: 1em;
     height: 3em;
     width: 100%;
@@ -141,7 +107,7 @@ footer  {
 }
 
 footer p  {
-    float: right;
+    float: left;
     font-size: 0.5em;
     color: aliceblue;
     margin: auto;

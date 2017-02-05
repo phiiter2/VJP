@@ -93,11 +93,12 @@ div img {
 
 header  {
     font-size: 1.3em;
-    font-family: Quicksand, sans-serif;
-    font-weight: 900;
-    
+    font-weight: 600;
 }
 
+header p  {
+    padding-bottom: 1em;
+}
 
 /*ARTIKKELIT*/
 

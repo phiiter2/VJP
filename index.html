@@ -19,6 +19,37 @@
                     <li><a href="keskustelua.html">Keskustelua</a></li>
                 </ul>
             </nav>
+            <nav class="navilist">
+                <button onclick="alas()" class="dropbtn">...</button>
+                <ul id="droppi" class="dropcontent">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
+                    <li><a href="toimijat.html">Alan toimijat</a></li>
+                    <li><a href="keskustelua.html">Keskustelua</a></li>
+                </ul>
+            </nav>
+            <script>
+                // kun klikkaa nappulaa tulee näkyviin
+                function alas(){
+                    document.getElementById("droppi").classList.toggle("show");
+                }
+
+                // kun klikkaa ulkopuolelt pois näkyvist
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropcontent");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
+
+
             <header>
                <!-- <img id="isokuva" src="http://www.realsacharcoal.com/wp-content/uploads/2014/04/slider1.jpg?i=80979" /> -->
                 <img id="isokuva" src="juliste.jpg" />
@@ -39,7 +70,9 @@ Kivihiilen käyttö vähenee jatkuvasti, kun samaan aikaan uusiutuvat energiamuo
                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Vanhasen_II_hallitus.JPG/300px-Vanhasen_II_hallitus.JPG" /> 
                 </article>
             </section>
-            <a id="h3a" href="keskustelua.html"><h3 id="h3">"Vihreässä kaupungissa päästään eroon kivihiilestä ja panostetaan uusiutuviin energiamuotoihin"</h3></a>
+            <div id="divi">
+                <a id="h3a" href="keskustelua.html"><h3 id="h3">"Vihreässä kaupungissa päästään eroon kivihiilestä ja panostetaan uusiutuviin energiamuotoihin"</h3></a>
+            </div>
             <footer>
                 <p>Copyright 2017 Pete Piskuinen  helen@aalto.f  +358440498261</p>
             </footer>

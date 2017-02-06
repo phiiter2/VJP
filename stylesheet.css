@@ -9,6 +9,7 @@ body  {
 
 
 .navi  {
+    display: block;
     background-color: #1e1e1e;
     text-align: center;
     position: fixed;
@@ -35,6 +36,7 @@ body  {
 .navi a:hover  {
     color: orangered;
 }
+
 
 
 #isokuva  {
@@ -71,6 +73,7 @@ article  {
 }
 
 .leipäteksti  {
+    display: block;
     font-size: 1em;
     top: 2em;
     color: black;
@@ -84,9 +87,10 @@ article  {
 
 article img  {
     position: absolute;
-    top: 1.2em;
+    top: 3.8em;
     right: 2em;
-    height: 60%;
+    width: 30%;
+    border: 2px groove black;
 }
 
 
@@ -120,34 +124,105 @@ article img  {
 summary  {
     font-size: 2em;
     font-family: Arial;
+}
+
+
+
+/*dropdowni  |  500px ja pienempi*/
+
+.navilist  {
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
     
+    .dropbtn  {
+    text-decoration: none;
+    color: #b04802;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    background: black;
+    border: 1px solid #b04802;
+    width: 100%;
+}
+
+.dropbtn:hover, .dropbtn:focus  {
+    color: orangered;
+}
+
+.navilist  {
+    display: block;
+    background-color: #1e1e1e;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0.7em;
+    z-index: 2;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    top: 0.9em;
+    left: 0;
+    padding-bottom: 0.3em;
+    background-color: #1e1e1e;
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+    z-index: 1;
+}
+
+.dropcontent a:hover {
+    color: orangered;
+}
+
+.show {display:block;}
+
+
+.navilist li  {
+    display: block;
+    margin-right: auto;
+    padding: 0.3em;
+    border: 1px solid #b04802
+}
+
+.navilist a {
+    text-decoration: none;
+    color: #b04802;
+    font-family: Quicksand, sans-serif;
+    font-size: 1em;
+    margin-right: auto;
+    text-align: center;
+}
+
+#divi  {
+    margin-top: 15em;
+}
     
 }
 
-@media screen and (max-width: 500px) {
-    article  {
-        width: 100%
-    }
-}
+
 
 footer  {
-    position: absolute;
+    float: right;
+    bottom: 0;
     font-size: 1em;
-    height: 3em;
+    height: 6em;
     width: 100%;
     color: orangered;
     background-color: #111111;
-    clear: both;
 }
 
 footer p  {
-    float: right;
-    font-size: 0.5em;
+    float: left;
+    font-size: 1em;
     color: aliceblue;
     margin: auto;
     padding: 2px;
     width: 15%;
     line-height: 1.5em;
     font-family: quicksand, sans-serif;
-    clear: both;
 }

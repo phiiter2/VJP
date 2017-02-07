@@ -106,13 +106,8 @@ article img  {
 
 #h3  {
     font-family: quicksand, sans-serif;
-    position: relative;
-    top: -2em;
     font-size: 2em;
-    margin: 1em;
     padding: 0.5em;
-    background-color: #111111;
-    border-radius: 1em;
     color: #b04802;
 }
 
@@ -198,13 +193,20 @@ summary  {
     text-align: center;
 }
 
-#divi  {
-    margin-top: 15em;
-}
     
 }
 
 
+
+
+
+
+#divi  {
+    margin-top: 15em;
+    background-color: #202020;
+    margin: 0;
+    padding: 1em 1em 2em 1em;
+}
 
 footer  {
     float: right;
@@ -221,7 +223,6 @@ footer p  {
     font-size: 1em;
     color: aliceblue;
     margin: auto;
-    padding: 2px;
     width: 15%;
     line-height: 1.5em;
     font-family: quicksand, sans-serif;

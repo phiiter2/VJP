@@ -134,7 +134,7 @@ summary  {
     display: none;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 767px) {
     
     .dropbtn  {
     text-decoration: none;
@@ -225,4 +225,10 @@ footer p  {
     width: 15%;
     line-height: 1.5em;
     font-family: quicksand, sans-serif;
+}
+
+footer img  {
+    float: right;
+    height: 40px;
+    margin: 1em;
 }

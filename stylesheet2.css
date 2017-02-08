@@ -80,7 +80,7 @@ body  {
 
 /*KUVAT*/
 
-#isokuva  {
+.isokuva  {
     width: 100%;
     float: left;
 }
@@ -117,7 +117,7 @@ article h3  {
     article  {
         width: 100%
     }
-    s
+    
 }
 
 
@@ -125,21 +125,37 @@ article h3  {
 
 
 footer  {
-    position: absolute;
+    bottom: 0;
     font-size: 1em;
-    height: 3em;
+    height: 6em;
     width: 100%;
     color: orangered;
     background-color: #111111;
 }
 
 footer p  {
-    float: right;
-    font-size: 0.5em;
-    color: aliceblue;
+    position: absolute;
+    float: left;
+    font-size: 0.7em;
+    color: gray;
     margin: auto;
-    padding: 2px;
-    width: 15%;
-    line-height: 1.5em;
+    width: 17%;
+    line-height: 1.8em;
     font-family: quicksand, sans-serif;
+    padding: 5px;
+}
+
+footer img  {
+    float: right;
+    height: 40px;
+    margin: 0.5em;
+}
+
+
+#helenlogo  {
+    float: none;
+    display: block;
+    width: 150px;
+    height: 85px;
+    margin: auto;
 }

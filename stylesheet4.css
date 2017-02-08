@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body  {
-    background: #ecddd1;
+    background: #000000;
 }
 
 
@@ -83,7 +83,7 @@ h3  {
     font-family: 'Permanent Marker', cursive;
 }
 
-#neljä  {
+#nelja  {
     width: 60%;
     float: right;
     padding: 3em;
@@ -98,42 +98,45 @@ h4  {
     font-family: 'Permanent Marker', cursive;
 }
 
-#p  {
-    background-color: #000000;
-    text-align: center;
-    left: 0px;
-    right: 0px;
-    padding: 6.8% 2% 2% 2%;
-    color: #b04802;
-    font-family: Quicksand, sans-serif;
-    font-size: 2em;
-}
 
 
-@media screen and (max-width: 500px) {
-    article  {
-        width: 100%
-    }
-}
+
+
+
 
 footer  {
-    bottom: 0;
+    clear: both;
+    bottom: 0px;
     font-size: 1em;
-    height: 3em;
     width: 100%;
     color: orangered;
     background-color: #111111;
-    clear: both;
+    height: 6em;
 }
 
 footer p  {
+    position: absolute;
     float: left;
-    font-size: 0.5em;
-    color: aliceblue;
+    font-size: 0.7em;
+    color: gray;
     margin: auto;
-    padding: 2px;
-    width: 15%;
-    line-height: 1.5em;
+    width: 17%;
+    line-height: 1.8em;
     font-family: quicksand, sans-serif;
-    clear: both;
+    padding: 5px;
+}
+
+footer img  {
+    float: right;
+    height: 40px;
+    margin: 0.5em;
+}
+
+
+#helenlogo  {
+    float: none;
+    display: block;
+    width: 150px;
+    height: 85px;
+    margin: auto;
 }

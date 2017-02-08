@@ -61,39 +61,33 @@ div img {
 
 
 h2  {
-    position: relative;
-    top: 0.5em;
-    font-size: 2em;
-    margin-left: 1em;
+    top: 1em;
+    font-size: 2.2em;
     color: black;
     letter-spacing: 0.1em;
 }
 
 article  {
-    position: relative;
     clear: both;
-    text-align: left;
-    height: 23em;
+    text-align: center;
+    width: 100%;
 }
 
-.leipäteksti  {
-    display: block;
+.leipateksti  {
     font-size: 1em;
-    top: 2em;
+    top: 2.5em;
     color: black;
     font-family: sans-serif;
-    text-align: left;
-    position: relative;
-    margin-left: 2em;
-    margin-right: 39%;
-    line-height: 1.2em
+    line-height: 1.2em;
+    max-height: 16em;
+    margin: 0.5em 4em 2em 4em;
 }
 
 article img  {
-    position: absolute;
-    top: 3.8em;
-    right: 2em;
-    width: 30%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 700px;
+    width: 60%;
     border: 2px groove black;
 }
 

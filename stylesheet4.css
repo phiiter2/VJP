@@ -32,6 +32,10 @@ body  {
     margin-right: 1.9em;
 }
 
+#nyt  {
+    color: orangered;
+}
+
 .navi a:hover  {
     color: orangered;
 }

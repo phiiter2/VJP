@@ -133,6 +133,10 @@ summary  {
 
 @media screen and (max-width: 767px) {
     
+    .leipateksti  {
+        margin: 0.5em 1em 2em 1em;
+    }
+    
     .dropbtn  {
     text-decoration: none;
     color: #b04802;

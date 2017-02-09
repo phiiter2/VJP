@@ -198,6 +198,10 @@ summary  {
     margin-right: auto;
     text-align: center;
 }
+    
+    footer  {
+        height: 7em;
+    }
 
     
 }

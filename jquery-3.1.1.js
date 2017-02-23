@@ -21,7 +21,6 @@ function compareNumbers(first, second) {
 
 function guessTheNumber() {
     var feed = document.getElementById('number').value;
-    console.log(feed);
     if ( (feed <= 10 && feed >= 1) && (feed.length <= 2) ) {
         alert(compareNumbers(feed, theOne).toString());
         theOne = getRandomInteger(1, 10);
@@ -31,6 +30,6 @@ function guessTheNumber() {
 }
 
 $(document).ready(function() {
-    $("#button").click(guessTheNumber)
+    $("#button").click(guessTheNumber);
 });
 

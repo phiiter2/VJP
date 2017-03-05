@@ -8,56 +8,81 @@
         
         <link rel="icon" type="image/png" href="favicon.png">
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
         <!--Tuottaa virheilmoitukse, vaikka koodi on toimivaa, ladattu google-fontssista-->
         <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand" rel="stylesheet"> 
         <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+        <script type="text/javascript" src="slideshow.js"></script>
         
-        <title>Kivihiili &#10084; </title>
+        <title>Kivihiili  </title>
     </head>
-        <body>
-            <nav class="navi">
-                <ul>
-                    <li><a id="nyt" href="index.html">Home</a></li>
-                    <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
-                    <li><a href="toimijat.html">Alan toimijat</a></li>
-                    <li><a href="keskustelua.html">Keskustelua</a></li>
-                </ul>
-            </nav>
-            <nav class="navilist">
-                <button onclick="alas()" class="dropbtn">...</button>
-                <ul id="droppi" class="dropcontent">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
-                    <li><a href="toimijat.html">Alan toimijat</a></li>
-                    <li><a href="keskustelua.html">Keskustelua</a></li>
-                </ul>
-            </nav>
-            <script>
-                // kun klikkaa nappulaa tulee näkyviin
-                function alas(){
-                    document.getElementById("droppi").classList.toggle("show");
-                }
+    <body>
+        <!-- Navigation: -->
+        <nav class="navi">
+            <ul>
+                <li><a id="nyt" href="index.html">Home</a></li>
+                <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
+                <li><a href="toimijat.html">Alan toimijat</a></li>
+                <li><a href="keskustelua.html">Keskustelua</a></li>
+            </ul>
+        </nav>
+        <nav class="navilist">
+            <button onclick="alas()" class="dropbtn">...</button>
+            <ul id="droppi" class="dropcontent">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
+                <li><a href="toimijat.html">Alan toimijat</a></li>
+                <li><a href="keskustelua.html">Keskustelua</a></li>
+            </ul>
+        </nav>
+                    
+        <script>
+            // kun klikkaa nappulaa tulee näkyviin
+            function alas(){
+                document.getElementById("droppi").classList.toggle("show");
+            }
 
-                // kun klikkaa ulkopuolelt pois näkyvist
-                window.onclick = function(event) {
-                    if (!event.target.matches('.dropbtn')) {
-                        var dropdowns = document.getElementsByClassName("dropcontent");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('show')) {
-                                openDropdown.classList.remove('show');
-                            }
+            // kun klikkaa ulkopuolelt pois näkyvist
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropcontent");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
                         }
                     }
                 }
-            </script>
+            }
+        </script>
 
+            
+        
+        <!-- News mediashow: -->
+        <div class="mediashow">
+                
+            <div class="slide">
+                <!-- article1 from json -->
+            </div>
+            
+            <div class="arrow" id="left" onclick="left()"><img src="left.png" /></div>
+            <div class="arrow" id="right" onclick="right()"><img src="right.png" /></div>
+            
+            <div class="where">
+                <p class="navi_" onclick="one()">_</p>
+                <p class="navi_" onclick="two()">_</p>
+                <p class="navi_" onclick="three()">_</p>
+            </div>
+            <div id="pauseButton" onclick="play()"><p>Pause</p></div>
 
-            <header>
-                <img id="isokuva" src="juliste.jpg" alt="Nyt hiilen aika" />
-            </header>
-            <div>
+        </div>
+        
+            
+            
+            
+            <!-- Next level ****: -->
+            <div class="fourSet">
                 <img src="juliste.jpg" alt="juliste" />
                 <img src="http://www.lansi-savo.fi/sites/default/files/styles/flexslider_full/public/images/news_item/9545174.jpg?itok=WIprnpPu" alt="juliste" />
                 <img src="http://www.olvi.fi/n5files/?getImageN5=true&folderId=98214&name=DLFE-11802.jpg" alt="juliste" />

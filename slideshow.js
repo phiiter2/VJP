@@ -70,7 +70,7 @@ var slideIndex = 0;
 function showSlides() {
     if (pause == false) {
         slides[slideIndex]()
-        localStorage.setItem("index", slideIndex);
+        //localStorage.setItem("index", slideIndex);
         slideIndex++;
     }
     if (slideIndex == slides.length) {slideIndex = 0} 
@@ -78,13 +78,13 @@ function showSlides() {
     var time = setTimeout(showSlides, 5000); // Change image every 5 seconds
     if (pause == true) {clearTimeout(time)} //Stops the show if pause pressed
 }
-function setStorageValue() {
+/*function setStorageValue() {
     slideIndex = localStorage.getItem("index");
 }
-
+*/
 
 //Starts slideing from the right spot..
-setStorageValue();
+//setStorageValue();
 showSlides();
 
 

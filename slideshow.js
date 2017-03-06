@@ -22,7 +22,8 @@ var requestURL = "https://silvanp1-93181.firebaseio.com/.json";
 }
 */
 
-        
+var slideIndex = 0;
+
 
 //slideContent()
 function setStorageValue() {
@@ -68,7 +69,6 @@ var slides = [
 ];
 
 var pause = false;
-var slideIndex = 0;
 //plays the slides every 5 secs
 function showSlides() {
     if (pause === false) {

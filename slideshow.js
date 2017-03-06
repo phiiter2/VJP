@@ -27,7 +27,7 @@ var requestURL = "https://silvanp1-93181.firebaseio.com/.json";
 //slideContent()
 function setStorageValue() {
     slideIndex = localStorage.getItem("index");
-    if (slideIndex == null) {slideIndex = 0;}
+    if (slideIndex === null) {slideIndex = 0;}
 }
 setStorageValue();
 //Array, containing slide transition commands
@@ -37,7 +37,7 @@ var slides = [
         var jsoni = data;
     
         function slide1() {
-            $(".slide").html(jsoni.article1[2]);
+            $(".slide").html(jsoni.article1);
         }
         slide1();
         });
@@ -48,7 +48,7 @@ var slides = [
         var jsoni = data;
     
         function slide2() {
-            $(".slide").html(jsoni.article2[2]);
+            $(".slide").html(jsoni.article2);
         }
         slide2();
         });
@@ -59,7 +59,7 @@ var slides = [
         var jsoni = data;
     
         function slide3() {
-            $(".slide").html(jsoni.article3[2]);
+            $(".slide").html(jsoni.article3);
         }
         slide3();
         });
@@ -71,15 +71,15 @@ var pause = false;
 var slideIndex = 0;
 //plays the slides every 5 secs
 function showSlides() {
-    if (pause == false) {
-        slides[slideIndex]()
+    if (pause === false) {
+        animate(slides[slideIndex]());
         localStorage.setItem("index", slideIndex);
         slideIndex++;
     }
-    if (slideIndex == slides.length) {slideIndex = 0} 
+    if (slideIndex == slides.length) {slideIndex = 0;} 
     
     var time = setTimeout(showSlides, 5000); // Change image every 5 seconds
-    if (pause == true) {clearTimeout(time)} //Stops the show if pause pressed
+    if (pause === true) {clearTimeout(time);} //Stops the show if pause pressed
 }
 
 
@@ -92,7 +92,7 @@ showSlides();
 
 function play() {
 
-        if (pause == false) {
+        if (pause === false) {
             pause = true;
             $("#pauseButton").html("<p>Play</p>");
             showSlides();
@@ -144,3 +144,9 @@ function three() {
     slides[2]();
 }
 
+function animate(callJSON) {
+    $('.slide').fadeOut('fast', function() {
+        callJSON;
+        $('.slide').fadeIn('fast');
+    });
+}

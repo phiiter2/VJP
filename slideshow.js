@@ -25,8 +25,11 @@ var requestURL = "https://silvanp1-93181.firebaseio.com/.json";
         
 
 //slideContent()
-
-
+function setStorageValue() {
+    slideIndex = localStorage.getItem("index");
+    if (slideIndex == null) {slideIndex = 0;}
+}
+setStorageValue();
 //Array, containing slide transition commands
 var slides = [
 
@@ -70,7 +73,7 @@ var slideIndex = 0;
 function showSlides() {
     if (pause == false) {
         slides[slideIndex]()
-        //localStorage.setItem("index", slideIndex);
+        localStorage.setItem("index", slideIndex);
         slideIndex++;
     }
     if (slideIndex == slides.length) {slideIndex = 0} 
@@ -78,13 +81,11 @@ function showSlides() {
     var time = setTimeout(showSlides, 5000); // Change image every 5 seconds
     if (pause == true) {clearTimeout(time)} //Stops the show if pause pressed
 }
-/*function setStorageValue() {
-    slideIndex = localStorage.getItem("index");
-}
-*/
+
+
 
 //Starts slideing from the right spot..
-//setStorageValue();
+
 showSlides();
 
 

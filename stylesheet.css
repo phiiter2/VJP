@@ -128,8 +128,14 @@ body  {
 
 
 
+#vid {
+    text-align: center;
+}
 
-
+video  {
+    padding: 30px 0 10px 0;
+    
+}
 
 
 

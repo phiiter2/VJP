@@ -131,6 +131,7 @@ $(document).ready(function() {
         context.font = "54px Arial";
         context.fillText(highScore,400,480);
     }
+    
 //NEW GAME BUTTON FUNCTIONALITY
     function getMousePos(event) {
         var rect = canvas.getBoundingClientRect();
@@ -140,15 +141,38 @@ $(document).ready(function() {
         };
     }
     function isInside(pos, rect){
-        return pos.x > rect.x && pos.x < rect.x+rect.width && pos.y < rect.y+rect.height && pos.y > rect.y;
+        return pos.x > rect.x && pos.x < rect.x+rect.w && pos.y < rect.y+rect.h && pos.y > rect.y;
     }
     var newGameButton = {
         x:300,
         y:550,
-        width:200,
-        height:100
+        w:200,
+        h:100
     }
+    canvas.addEventListener('click', function(evnt) {                   //new game button listener
+        var mousePos = getMousePos(evnt);
+
+        if (isInside(mousePos,newGameButton) && gameOver) {
+            location.reload();
+        }
+    }, false);
     
+//ENEMY CLICK LISTENER
+    canvas.addEventListener('click', function(evnt) {
+        var mousePos = getMousePos(evnt);
+        
+        var hit = false;
+        var hitIndex = 0;
+        for (i = 0; i < enemyList.length; i++) { 
+            if (isInside(mousePos, enemyList[i])) {
+                hitIndex = i;
+                hit = true;
+            }
+        }
+        if (hit) {                    //delete hit enemies
+            enemyList.splice(hitIndex, 1); 
+        }
+    }, false);
     
 //GET THE GAME RUNNING!
     gameOver = false;

@@ -109,6 +109,7 @@ var player1 = sprite({
         var lEdgeCoord = player1.x;
         var tEdgeCoord = player1.y;
         var bEdgeCoord = player1.y + player1.h;
+        //if catches the fish ...
         if ( (rEdgeCoord > player2.x) && (lEdgeCoord < (player2.x + player2.w)) && (bEdgeCoord > player2.y) && (tEdgeCoord < (player2.y + player2.w)) ) {
             gameOver = true;
             var lastHigh = localStorage.getItem("highScore");
@@ -117,6 +118,15 @@ var player1 = sprite({
             }
             highScore = localStorage.getItem("highScore");
             console.log(highScore)
+        }
+        //if hits powerup ...
+        if ( (rEdgeCoord > powerUpList[0].x) && (lEdgeCoord < (powerUpList[0].x + powerUpList[0].w)) && (bEdgeCoord > powerUpList[0].y) && (tEdgeCoord < (powerUpList[0].y + powerUpList[0].w)) ) {
+            player1.speed += 1;
+            setTimeout(function() {player1.speed -= 1;}, 3000);
+        }
+        if ( (rEdgeCoord > powerUpList[1].x) && (lEdgeCoord < (powerUpList[1].x + powerUpList[1].w)) && (bEdgeCoord > powerUpList[1].y) && (tEdgeCoord < (powerUpList[1].y + powerUpList[1].w)) ) {
+            player1.speed += 1;
+            setTimeout(function() {player1.speed -= 1;}, 3000);
         }
     };
     function movePlayer2(direction) {
@@ -146,8 +156,23 @@ var player1 = sprite({
                 }
                 break;
         }
+        
+        var rEdgeCoord = player2.x + player2.w;
+        var lEdgeCoord = player2.x;
+        var tEdgeCoord = player2.y;
+        var bEdgeCoord = player2.y + player2.h;
+        //if hits powerup ...
+        if ( (rEdgeCoord > powerUpList[0].x) && (lEdgeCoord < (powerUpList[0].x + powerUpList[0].w)) && (bEdgeCoord > powerUpList[0].y) && (tEdgeCoord < (powerUpList[0].y + powerUpList[0].w)) ) {
+            player2.speed += 0.1;
+            setTimeout(function() {player2.speed -= 1;}, 3000);
+        }
+        if ( (rEdgeCoord > powerUpList[1].x) && (lEdgeCoord < (powerUpList[1].x + powerUpList[1].w)) && (bEdgeCoord > powerUpList[1].y) && (tEdgeCoord < (powerUpList[1].y + powerUpList[1].w)) ) {
+            player2.speed += 1;
+            setTimeout(function() {player2.speed -= 1;}, 3000);
+        }
     };
 
+    
 //EDIT PLAYERS
     function changeSpeed1(changeBy) {
         player1.speed = player1.speed + changeBy;

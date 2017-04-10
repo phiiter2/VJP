@@ -130,6 +130,8 @@ $(document).ready(function() {
         context.fillText(scoreCount,400,300);
         context.font = "54px Arial";
         context.fillText(highScore,400,480);
+        context.font = "34px Arial";
+        context.fillText('NEW GAME',400,600);
     }
     
 //NEW GAME BUTTON FUNCTIONALITY
@@ -144,10 +146,10 @@ $(document).ready(function() {
         return pos.x > rect.x && pos.x < rect.x+rect.w && pos.y < rect.y+rect.h && pos.y > rect.y;
     }
     var newGameButton = {
-        x:300,
+        x:290,
         y:550,
-        w:200,
-        h:100
+        w:250,
+        h:70
     }
     canvas.addEventListener('click', function(evnt) {                   //new game button listener
         var mousePos = getMousePos(evnt);

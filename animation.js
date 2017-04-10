@@ -117,7 +117,7 @@ $(document).ready(function() {
         
 //SCORE & GAME OVER SCREEN
     scoreCount = 9;
-    var highScore = 0;
+    highScore = 0;
     function drawGameOver() {
         context.textAlign = "center";
         context.fillStyle = "red";
@@ -129,7 +129,7 @@ $(document).ready(function() {
         context.font = "80px Arial";
         context.fillText(scoreCount,400,300);
         context.font = "60px Arial";
-        context.fillText(highScore,400,480);
+        context.fillText(highScore,400,440);
     }
     
     /*

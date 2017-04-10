@@ -116,6 +116,7 @@ var player1 = sprite({
                 localStorage.setItem("highScore", scoreCount);
             }
             highScore = localStorage.getItem("highScore");
+            console.log(highScore)
         }
     };
     function movePlayer2(direction) {

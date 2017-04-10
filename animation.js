@@ -128,16 +128,28 @@ $(document).ready(function() {
         context.strokeText("-HIGHSCORE-",400,400);
         context.font = "80px Arial";
         context.fillText(scoreCount,400,300);
-        context.font = "60px Arial";
-        context.fillText(highScore,400,440);
+        context.font = "54px Arial";
+        context.fillText(highScore,400,480);
+    }
+//NEW GAME BUTTON FUNCTIONALITY
+    function getMousePos(event) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+        };
+    }
+    function isInside(pos, rect){
+        return pos.x > rect.x && pos.x < rect.x+rect.width && pos.y < rect.y+rect.height && pos.y > rect.y;
+    }
+    var newGameButton = {
+        x:300,
+        y:550,
+        width:200,
+        height:100
     }
     
-    /*
-    var lastHigh = localStorage.getItem("highScore");
-    if (lastHigh === null || scoreCount > lastHigh ) {
-        localStorage.setItem("highScore", scoreCount);
-    }
-    */
+    
 //GET THE GAME RUNNING!
     gameOver = false;
     createEnemy("erkki");

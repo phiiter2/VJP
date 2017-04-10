@@ -88,8 +88,8 @@ var player1 = sprite({
                 break;
             case 'right':
                 player1.x += player1.speed;
-                if (player1.x > 680) {
-                    player1.x = 680;
+                if (player1.x > 780) {
+                    player1.x = 780;
                 }
                 break;
             case 'up':
@@ -139,8 +139,8 @@ var player1 = sprite({
                 break;
             case 'right':
                 player2.x += player2.speed;
-                if (player2.x > 680) {
-                    player2.x = 680;
+                if (player2.x > 780) {
+                    player2.x = 780;
                 }
                 break;
             case 'up':
@@ -163,7 +163,7 @@ var player1 = sprite({
         var bEdgeCoord = player2.y + player2.h;
         //if hits powerup ...
         if ( (rEdgeCoord > powerUpList[0].x) && (lEdgeCoord < (powerUpList[0].x + powerUpList[0].w)) && (bEdgeCoord > powerUpList[0].y) && (tEdgeCoord < (powerUpList[0].y + powerUpList[0].w)) ) {
-            player2.speed += 0.1;
+            player2.speed += 1;
             setTimeout(function() {player2.speed -= 1;}, 3000);
         }
         if ( (rEdgeCoord > powerUpList[1].x) && (lEdgeCoord < (powerUpList[1].x + powerUpList[1].w)) && (bEdgeCoord > powerUpList[1].y) && (tEdgeCoord < (powerUpList[1].y + powerUpList[1].w)) ) {

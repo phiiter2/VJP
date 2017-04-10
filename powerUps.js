@@ -1,13 +1,11 @@
 //var imgSlow = document.getElementById('player1');
 //var imgDoubleSpeed = document.getElementById('player2');
-var imgSlow = new Image();
-var imgDoubleSpeed = new Image();
+var imgPu = new Image();
 
 
 
 $(document).ready(function () {
-    imgSlow.src = "http://files.gamebanana.com/img/ico/sprays/54b226bbd6e42.png";
-    imgDoubleSpeed.src = "http://pix.iemoji.com/images/emoji/apple/ios-9/256/pouting-face.png";
+    imgPu.src = "plant.png";
 });
 
 
@@ -20,14 +18,14 @@ function randomCoord() { return Math.random() * 700; };
             y: randomCoord(),
             w: 40,
             h: 40,
-            img: imgSlow
+            img: imgPu
         },
         slow = {
             x: randomCoord(),
             y: randomCoord(),
             w: 40,
             h: 40,
-            img: imgDoubleSpeed
+            img: imgPu
         }
     ]
 

@@ -116,7 +116,7 @@ $(document).ready(function() {
     
         
 //SCORE & GAME OVER SCREEN
-    scoreCount = 9;
+    scoreCount = 0;
     highScore = 0;
     function drawGameOver() {
         context.textAlign = "center";

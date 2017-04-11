@@ -121,12 +121,12 @@ var player1 = sprite({
         }
         //if hits powerup ...
         if ( (rEdgeCoord > powerUpList[0].x) && (lEdgeCoord < (powerUpList[0].x + powerUpList[0].w)) && (bEdgeCoord > powerUpList[0].y) && (tEdgeCoord < (powerUpList[0].y + powerUpList[0].w)) ) {
-            player1.speed += 1;
-            setTimeout(function() {player1.speed -= 1;}, 3000);
+            player1.speed += 0.1;
+            setTimeout(function() {player1.speed -= 0.1;}, 1000);
         }
         if ( (rEdgeCoord > powerUpList[1].x) && (lEdgeCoord < (powerUpList[1].x + powerUpList[1].w)) && (bEdgeCoord > powerUpList[1].y) && (tEdgeCoord < (powerUpList[1].y + powerUpList[1].w)) ) {
-            player1.speed += 1;
-            setTimeout(function() {player1.speed -= 1;}, 3000);
+            player1.speed += 0.1;
+            setTimeout(function() {player1.speed -= 0.1;}, 1000);
         }
     };
     function movePlayer2(direction) {
@@ -163,12 +163,12 @@ var player1 = sprite({
         var bEdgeCoord = player2.y + player2.h;
         //if hits powerup ...
         if ( (rEdgeCoord > powerUpList[0].x) && (lEdgeCoord < (powerUpList[0].x + powerUpList[0].w)) && (bEdgeCoord > powerUpList[0].y) && (tEdgeCoord < (powerUpList[0].y + powerUpList[0].w)) ) {
-            player2.speed += 1;
-            setTimeout(function() {player2.speed -= 1;}, 3000);
+            player2.speed += 0.1;
+            setTimeout(function() {player2.speed -= 0.1;}, 1000);
         }
         if ( (rEdgeCoord > powerUpList[1].x) && (lEdgeCoord < (powerUpList[1].x + powerUpList[1].w)) && (bEdgeCoord > powerUpList[1].y) && (tEdgeCoord < (powerUpList[1].y + powerUpList[1].w)) ) {
-            player2.speed += 1;
-            setTimeout(function() {player2.speed -= 1;}, 3000);
+            player2.speed += 0.1;
+            setTimeout(function() {player2.speed -= 0.1;}, 1000);
         }
     };
 

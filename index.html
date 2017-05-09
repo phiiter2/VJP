@@ -1,127 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-       <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="kivihiili ja sen kieltolaki" content="tietoa kivihiilestä suomessa" />
-        <meta name="kantoja kivihiilestä" content="A simple web page lorem ipsum..." />
-        
-        <link rel="icon" type="image/png" href="favicon.png">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-        <!--Tuottaa virheilmoitukse, vaikka koodi on toimivaa, ladattu google-fontssista-->
-        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand" rel="stylesheet"> 
-        <link type="text/css" rel="stylesheet" href="stylesheet.css" />
-        <script type="text/javascript" src="slideshow.js"></script>
-        
-        <title>Kivihiili  </title>
-    </head>
-    <body>
-        <!-- Navigation: -->
-        <nav class="navi">
-            <ul>
-                <li><a id="nyt" href="index.html">Home</a></li>
-                <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
-                <li><a href="toimijat.html">Alan toimijat</a></li>
-                <li><a href="keskustelua.html">Keskustelua</a></li>
-            </ul>
-        </nav>
-        <nav class="navilist">
-            <button onclick="alas()" class="dropbtn">...</button>
-            <ul id="droppi" class="dropcontent">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="hiilivsturve.html">Hiili vs. Turve</a></li>
-                <li><a href="toimijat.html">Alan toimijat</a></li>
-                <li><a href="keskustelua.html">Keskustelua</a></li>
-            </ul>
-        </nav>
-                    
-        <script>
-            // kun klikkaa nappulaa tulee näkyviin
-            function alas(){
-                document.getElementById("droppi").classList.toggle("show");
-            }
+<html lang="en">
+  <head>
+    <title>Canvas Example</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="enemy.js"></script>
+    <script type="text/javascript" src="powerUps.js"></script>
+    <script type="text/javascript" src="animation.js"></script>
 
-            // kun klikkaa ulkopuolelt pois näkyvist
-            window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropcontent");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
-        </script>
-
-            
-        
-        <!-- News mediashow: -->
-        <div class="mediashow">
-                
-            <div class="slide">
-                <!-- article1 from json -->
-            </div>
-            
-            <div class="arrow" id="left" onclick="left()"><img src="left.png" /></div>
-            <div class="arrow" id="right" onclick="right()"><img src="right.png" /></div>
-            
-            <div class="where">
-                <p class="navi_" onclick="one()">_</p>
-                <p class="navi_" onclick="two()">_</p>
-                <p class="navi_" onclick="three()">_</p>
-            </div>
-            <div id="pauseButton" onclick="play()"><p>Pause</p></div>
-
-        </div>
-        
-            
-        
-            
-            <!-- Next level ****: -->
-            <div class="fourSet">
-                <img src="juliste.jpg" alt="juliste" />
-                <img src="http://www.lansi-savo.fi/sites/default/files/styles/flexslider_full/public/images/news_item/9545174.jpg?itok=WIprnpPu" alt="juliste" />
-                <img src="http://www.olvi.fi/n5files/?getImageN5=true&folderId=98214&name=DLFE-11802.jpg" alt="juliste" />
-                <img src="http://ichef.bbci.co.uk/news/640/media/images/75998000/jpg/_75998272_conversation2_thinkstock.jpg" alt="juliste" />
-            </div>
-        
-    <div id="vid">
-        <video width="740" height="417" poster="http://www.chuckbauman.com/fire-line-lowrider%20hood-flames.jpg" controls>
-	        <!-- primary load -->
-            <source src="KIVIHIILIvideo.webm" type="video/webm" />
-            <!-- secondary load  -->
-            <source src="KIVIHIILIvideo.ogv" type="video/ogg" />
-            <!-- last load option -->
-            <source src="KIVIHIILIvideo.mpg" type="video/mpeg" />
-            
-		  
-            <!-- fallback image. note the title field below, put the title of the video there -->
-            <img src="juliste.jpg" width="640" height="360" alt="__TITLE__"
-		     title="No video playback capabilities, look out from youtube: 'KIVIHIILILAKI'" />
-            
-        </video>
-    </div>
-        
-            <section>
-                <article>
-                    <img src="http://im.mtv.fi/image/5159236/landscape16_9/1024/576/17f4037cf47c7d739a58a9f3658898fd/Ns/sipilan-hallitus-sipila-stubb-soini.jpg" alt="hallitus" /> 
-                    <h2>Kivihiilen tilanne Suomessa</h2>
-                    <p class="leipateksti">Hallitus suunnittelee kivihiilen käytön kieltämistä lailla vuoteen 2030 mennessä. Tätä perustellaan hallitusohjelmalla ja ympäristötavoitteilla, mutta kuitenkin hallitus suunnittelee korvaavansa kivihiiltä turpeella, joka on kivihiiltä saastuttavampi vaihtoehto.<br>
-Kivihiilen käyttö vähenee jatkuvasti, kun samaan aikaan uusiutuvat energiamuodot kehittyvät. On hyödyllisempää investoida uusiin innovaatioihin ja uusiutuvien energiamuotojen kehittämiseen, kuin vaihtaa edullinen ja vakaa kivihiili suot tuhoavaan turpeeseen.</p>
-                </article>
-            </section>
-            <div id="divi">
-                <a id="h3a" href="keskustelua.html"><h3 id="h3">"Vihreässä kaupungissa päästään eroon kivihiilestä ja panostetaan uusiutuviin energiamuotoihin"</h3></a>
-            </div>
-            <footer>
-                <p>Copyright 2017 Petteri Silvanto <br> helen@aalto.fi <br> +358440498261</p>
-                <a href="https://www.instagram.com"><img src="http://hoganchua.hudbhi7gzmvkzpctzr6hwgk2lbnfnkerebgcjs6k8yq.netdna-cdn.com/wp-content/uploads/2016/05/Instagram2016_black-tran128px.png" alt="ig" /></a>
-                <a href="https://www.twitter.com"><img src="http://www.iconarchive.com/download/i83705/custom-icon-design/mono-general-3/twitter.ico" alt="twitter" /></a>
-                <a id="helenlog" href="https://www.helen.fi"><img id="helenlogo"  src="http://cdn.safe.com/wp-content/uploads/2014/10/22133526/helsingin-energia.png" alt="helen" /></a>
-            </footer>
-        </body>
+  </head>
+    
+    
+  <body>
+      <canvas id="canvas"></canvas>
+      
+      <!--<img src="http://files.gamebanana.com/img/ico/sprays/54b226bbd6e42.png"  id="player1" />
+      <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/pouting-face.png" id="player2" />--->
+  </body>
+    
 </html>
+
+
+
+
+
+<!--style="display: none"--->

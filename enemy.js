@@ -64,14 +64,14 @@ $(document).ready(function () {
                 var bEdgeCoord = enemyList[i].y + enemyList[i].h
                 
                 if ( (rEdgeCoord > player1.x) && (lEdgeCoord < (player1.x + player1.w)) && (bEdgeCoord > player1.y) && (tEdgeCoord < (player1.y + player1.w)) ) {      //if hits player1
-                    player1.speed -= 2;
-                    setTimeout(function() {player1.speed += 2;} , 2000);
+                    player1.speed -= 8;
+                    setTimeout(function() {player1.speed += 8;} , 2000);
                     enemyHit[0] = enemyList[i];
                     hitIndex = i;
                 }
                 if ( (rEdgeCoord > player2.x) && (lEdgeCoord < (player2.x + player2.w)) && (bEdgeCoord > player2.y) && (tEdgeCoord < (player2.y + player2.w)) ) {     //if hits player2
-                    player2.speed -= 2;
-                    setTimeout(function() {player2.speed += 2;} , 2000);
+                    player2.speed -= 8;
+                    setTimeout(function() {player2.speed += 8;} , 2000);
                     enemyHit[0] = enemyList[i];
                     hitIndex = i;
                 }
